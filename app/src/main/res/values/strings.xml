@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Мои рисунки</string>
+
+    <string name="delete">Удалить</string>
+    <string name="tools">Инструменты</string>
+    <string name="thickness">Толщина</string>
+    <string name="tool_type">Тип инструмента</string>
+    <string name="palette">Палитра</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+</resources>
