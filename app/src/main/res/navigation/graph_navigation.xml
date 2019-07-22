@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/graph_navigation">
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/graph_navigation" app:startDestination="@id/listFragment">
 
+    <fragment android:id="@+id/drawFragment" android:name="com.cactusfromhell.simple_drawing.fragments.DrawFragment"
+              android:label="DrawFragment"
+              tools:layout="@layout/fragment_draw"/>
+    <fragment android:id="@+id/listFragment" android:name="com.cactusfromhell.simple_drawing.fragments.ListFragment"
+              android:label="ListFragment"
+              tools:layout="@layout/fragment_list">
+        <action android:id="@+id/action_listFragment_to_drawFragment" app:destination="@id/drawFragment"/>
+    </fragment>
 </navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_draw_id">
+
+    <fragment
+            android:name="com.cactusfromhell.simple_drawing.fragments.ActionBarFragment"
+            android:id="@+id/headlines_fragment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    <fragment
+            android:name="com.cactusfromhell.simple_drawing.fragments.CanvasFragment"
+            android:id="@+id/article_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

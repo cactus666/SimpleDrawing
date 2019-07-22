@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rounded_for_item"
+              android:layout_margin="13dp">
+
+
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_content_img"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <!--<ImageView-->
+                <!--android:id="@+id/src_image"-->
+                <!--android:layout_width="130dp"-->
+                <!--android:layout_height="120dp"/>-->
+
+        <ImageView
+                android:id="@+id/src_image"
+                android:layout_width="130dp"
+                android:layout_height="134dp"/>
+
+        <TextView
+                android:id="@+id/name_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/size_text"
+        />
+
+        <TextView
+                android:id="@+id/date_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/size_small_text"
+        />
+    </LinearLayout>
+
+
+    <ImageView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/layout_content_img"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/ic_setting"
+    />
+
+</RelativeLayout>
+
+
