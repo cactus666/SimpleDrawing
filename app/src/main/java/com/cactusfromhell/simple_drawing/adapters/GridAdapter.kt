@@ -5,16 +5,19 @@ import android.content.Context
 import android.content.DialogInterface
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import android.view.ViewGroup
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.ImageView
 import java.io.File
 import com.cactusfromhell.simple_drawing.R
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
+import android.view.ContextThemeWrapper
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.PopupMenu
 
-class GridAdapter(context: Context, private val mData: Array<File>): RecyclerView.Adapter<GridAdapter.ViewHolder>() {
+
+class GridAdapter(context: Context, private val mData: ArrayList<File>): RecyclerView.Adapter<GridAdapter.ViewHolder>() {
 
 
     private val mInflater: LayoutInflater
@@ -51,25 +54,40 @@ class GridAdapter(context: Context, private val mData: Array<File>): RecyclerVie
     inner class ViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var name: TextView
         var data: TextView
-//        var setting: ImageView
+        var setting: ImageView
         var image: ImageView
         lateinit var file: File
 
         init {
             name = itemView.findViewById(R.id.name_image)
             data = itemView.findViewById(R.id.date_image)
-//            setting = itemView.findViewById(R.id.setting)
+            setting = itemView.findViewById(R.id.setting)
             image = itemView.findViewById(R.id.src_image)
             itemView.setOnClickListener(this)
-//            setting.setOnClickListener(this)
+            setting.setOnClickListener(this)
         }
 
 
         override fun onClick(view: View) {
             when (view.id) {
-//                R.id.setting -> {
+                R.id.setting -> {
+                    val wrapper = ContextThemeWrapper(context.applicationContext, R.style.style_for_menu)
+                    val popup = PopupMenu(wrapper, view)
+                    popup.inflate(R.menu.menu_for_item)
+                    popup.show()
 
-//                }
+                    popup.setOnMenuItemClickListener { item ->
+                        when (item.itemId) {
+                            R.id.action_delete -> {
+                                file.delete()
+                                mData.removeAt(position)
+                                notifyDataSetChanged()
+                            }
+//                            R.id.action_edit -> {}
+                        }
+                        true
+                    }
+                }
                 else -> {
                     val cancelButtonListener = object : DialogInterface.OnClickListener {
                         override fun onClick(arg0: DialogInterface, arg1: Int) {}

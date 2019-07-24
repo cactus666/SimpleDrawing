@@ -2,6 +2,7 @@
     <string name="app_name">Мои рисунки</string>
 
     <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
     <string name="tools">Инструменты</string>
     <string name="thickness">Толщина</string>
     <string name="tool_type">Тип инструмента</string>

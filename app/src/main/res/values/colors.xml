@@ -2,13 +2,13 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#F8FF13</color>
     
     <color name="color_white">#FFFFFF</color>
     <color name="color_black">#000000</color>
     <color name="color_fab">#F8FF13</color>
     <color name="color_gray">#4f5b62</color>
-
+    <color name="color_main">#F8FF13</color>
 
     <color name="color_palette_1">#F0A30A</color>
     <color name="color_palette_2">#825A2C</color>

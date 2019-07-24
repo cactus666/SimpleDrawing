@@ -35,14 +35,26 @@
                     android:src="@drawable/ic_navigate_next"
             />
 
-            <ImageView
+            <TextView
                     android:id="@+id/eraser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="16dp"
-                    android:src="@drawable/ic_eraser"
+                    android:background="@drawable/rounded_ellipse"
+                    android:drawableEnd="@drawable/ic_eraser"
+                    android:paddingRight="10dp"
             />
+
+            <!--<ImageView-->
+                    <!--android:id="@+id/eraser"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="16dp"-->
+                    <!--android:src="@drawable/ic_eraser"-->
+                    <!---->
+            <!--/>-->
 
         </RelativeLayout>
 
